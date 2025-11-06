@@ -2,7 +2,7 @@ name: Build & Deploy Flutter Web to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # update if your default branch is different
 
 jobs:
   build-and-deploy:
@@ -15,9 +15,8 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.4'
+          flutter-version: '3.35.7'
           channel: 'stable'
-
 
       - name: Install dependencies
         run: flutter pub get
